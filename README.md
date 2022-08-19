@@ -40,25 +40,15 @@ To signal the end of the data packet, the sending UART drives the data transmiss
 
 1. The transmitting UART receives data in parallel from the data bus:
 
-[![](RackMultipart20220819-1-jgykcb_html_82ca85d343f2ebe2.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-UART-Data-Transmission-Diagram-UART-Gets-Byte-from-Data-Bus.png)
-
 2. The transmitting UART adds the start bit, parity bit, and the stop bit(s) to the data frame:
-
-[![](RackMultipart20220819-1-jgykcb_html_ba974c3170fbf88c.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-UART-Data-Transmission-Diagram-UART-Adds-Start-Parity-ad-Stop-Bits-2.png)
 
 3. The entire packet is sent serially from the transmitting UART to the receiving UART. The receiving UART samples the data line at the pre-configured baud rate:
 
-[![](RackMultipart20220819-1-jgykcb_html_bd23700d1660dd6e.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-UART-Data-Transmission-Diagram-Transmitting-UART-Sends-Data-Packet-Serially-to-Receiving-UART.png)
-
 4.  The receiving UART discards the start bit, parity bit, and stop bit from the data frame:
-
-[![](RackMultipart20220819-1-jgykcb_html_f0dcd15bc5afdba4.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-UART-Data-Transmission-Diagram-UART-Removes-Start-Parity-and-Stop-Bits-2.png)
 
 5. The receiving UART converts the serial data back into parallel and transfers it to the data bus on the receiving end:
 
-[![](RackMultipart20220819-1-jgykcb_html_e3a2d021c3ae8f48.png)](https://www.circuitbasics.com/wp-content/uploads/2016/02/Introduction-to-UART-Data-Transmission-Diagram-Receiving-UART-Sends-Byte-to-Data-Bus-2.png)
 
-#
 
 # ADVANTAGES AND DISADVANTAGES OF UARTS:
 
