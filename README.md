@@ -20,8 +20,7 @@ The UART that is going to transmit data receives the data from a data bus. The d
 
 UART transmitted data is organized into _packets_. Each packet contains 1 start bit, 5 to 9 data bits (depending on the UART), an optional _parity_ bit, and 1 or 2 stop bits:
 
-# ![](RackMultipart20220819-1-jgykcb_html_295577154c1e3ac9.png)[
-](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-UART-Packet-Frame-and-Bits-2.png)START BIT:
+# START BIT:
 
 The UART data transmission line is normally held at a high voltage level when it's not transmitting data. To start the transfer of data, the transmitting UART pulls the transmission line from high to low for one clock cycle. When the receiving UART detects the high to low voltage transition, it begins reading the bits in the data frame at the frequency of the baud rate.
 
