@@ -19,6 +19,7 @@ The UART that is going to transmit data receives the data from a data bus. The d
 # UART DATA FORMAT:
 
 UART transmitted data is organized into _packets_. Each packet contains 1 start bit, 5 to 9 data bits (depending on the UART), an optional _parity_ bit, and 1 or 2 stop bits:
+![image](https://user-images.githubusercontent.com/56084662/185549928-90b921e7-f42b-4c6d-b730-f49bef199164.png)
 
 # START BIT:
 
@@ -39,14 +40,19 @@ To signal the end of the data packet, the sending UART drives the data transmiss
 # STEPS OF UART TRANSMISSION
 
 1. The transmitting UART receives data in parallel from the data bus:
+![image](https://user-images.githubusercontent.com/56084662/185549982-97c650a9-5915-4ed2-92e6-d2b0d13a33ea.png)
 
 2. The transmitting UART adds the start bit, parity bit, and the stop bit(s) to the data frame:
+![image](https://user-images.githubusercontent.com/56084662/185550008-825acf62-1f62-4c84-a011-03a6375ab9b9.png)
 
 3. The entire packet is sent serially from the transmitting UART to the receiving UART. The receiving UART samples the data line at the pre-configured baud rate:
+![image](https://user-images.githubusercontent.com/56084662/185550029-e8a5dfa8-2a3b-4433-9090-c028fa2b7926.png)
 
 4.  The receiving UART discards the start bit, parity bit, and stop bit from the data frame:
+![image](https://user-images.githubusercontent.com/56084662/185550047-b4de8d7a-d29b-4a11-a21b-60f6f5a50eda.png)
 
 5. The receiving UART converts the serial data back into parallel and transfers it to the data bus on the receiving end:
+![image](https://user-images.githubusercontent.com/56084662/185550073-cf21588e-ad2b-49e9-b544-86fab9c618e5.png)
 
 
 
