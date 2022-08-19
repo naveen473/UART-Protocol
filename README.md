@@ -13,3 +13,18 @@ Both UARTs must also must be configured to transmit and receive the same data pa
 
 HOW UART WORKS:
   The UART that is going to transmit data receives the data from a data bus. The data bus is used to send data to the UART by another device like a CPU, memory, or microcontroller. Data is transferred from the data bus to the transmitting UART in parallel form. After the transmitting UART gets the parallel data from the data bus, it adds a start bit, a parity bit, and a stop bit, creating the data packet. Next, the data packet is output serially, bit by bit at the Tx pin. The receiving UART reads the data packet bit by bit at its Rx pin. The receiving UART then converts the data back into parallel form and removes the start bit, parity bit, and stop bits. Finally, the receiving UART transfers the data packet in parallel to the data bus on the receiving end:
+  
+ADVANTAGES AND DISADVANTAGES OF UARTS
+No communication protocol is perfect, but UARTs are pretty good at what they do. Here are some pros and cons to help you decide whether or not they fit the needs of your project:
+
+ADVANTAGES
+Only uses two wires
+No clock signal is necessary
+Has a parity bit to allow for error checking
+The structure of the data packet can be changed as long as both sides are set up for it
+Well documented and widely used method
+DISADVANTAGES
+The size of the data frame is limited to a maximum of 9 bits
+Doesn’t support multiple slave or multiple master systems
+The baud rates of each UART must be within 10% of each other
+Continue on to part three of this series, Basics of the I2C Communication Protocol to learn about another way electronic devices communicate. Or if you haven’t already, check out part one, Basics of the SPI Communication Protocol.
